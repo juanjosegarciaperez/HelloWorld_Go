@@ -78,6 +78,27 @@ func referencia_Copia () {
 
 }
 
+func equivalencia_en_pies (altura float32) float32 {
+	altura = altura * 3.28
+	return altura
+}
+
+var altura float32 = 1.70
+
+func ConversionEnPies (altura2 *float32) float32 {
+	*altura2 = *altura2 - 0.10
+	return *altura2
+}
+
+var altura2 float32 = 1.70
+
+const Pi = 3.1416
+
+func area (radio float64) float64 {
+    return Pi * radio * radio
+}
+
+
 func main() {
 	// fmt.Println("texto de la funcion del ejecicio 2")
 	// pensionados()
@@ -86,4 +107,12 @@ func main() {
 	// scoope()
 	// puntero()
 	// referencia_Copia()
+	// fmt.Println("La altura es:", altura, "mts")
+	// fmt.Println("La altura es:", equivalencia_en_pies(altura), " pies")
+	// fmt.Println("La nueva altura es:", altura, "mts")
+	// fmt.Println("La altura es:", altura2, "mts")
+	// fmt.Println("Al envejecer:", ConversionEnPies(&altura), "mts")
+	// fmt.Println("Despues de envejecer:", altura2, "mts")
+	fmt.Println("El area de un circulo cuyo radio es 3 es: ", area(3))
 }
+
