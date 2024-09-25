@@ -113,6 +113,6 @@ func main() {
 	// fmt.Println("La altura es:", altura2, "mts")
 	// fmt.Println("Al envejecer:", ConversionEnPies(&altura), "mts")
 	// fmt.Println("Despues de envejecer:", altura2, "mts")
-	fmt.Println("El area de un circulo cuyo radio es 3 es: ", area(3))
+	// fmt.Println("El area de un circulo cuyo radio es 3 es: ", area(3))
 }
 
