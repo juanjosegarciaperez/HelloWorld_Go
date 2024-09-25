@@ -98,7 +98,53 @@ func area (radio float64) float64 {
     return Pi * radio * radio
 }
 
+func circulo (radio float64) (area float64, perimetro float64) {
+	area = Pi * radio * radio
+	perimetro = 2 * Pi * radio
+	return area, perimetro
+}
 
+func sumar1 (numeros ...int) int {
+	total := 0
+	for _, numero := range numeros {
+		total = numero + total
+	}
+	return total
+}
+
+func ecodelamotaña (mensaje string, iteraciones uint) {
+	if iteraciones > 1 {
+		ecodelamotaña(mensaje, iteraciones-1)
+	}
+	fmt.Println(mensaje, iteraciones)
+}
+
+func circulo2 (radio float64) (area1 func() float64, perimetro1 func() float64) {
+	area1 = func() float64 {
+		return Pi * radio * radio
+	}
+
+	perimetro1 = func() float64 {
+        return 2 * Pi * radio
+    }
+
+	return
+}
+
+func Objeto_Animal_Persona () {
+	var juguete string
+    fmt.Println("Elige persona, animal o cosa:")
+    fmt.Scanln(&juguete)
+    if juguete == "persona" {
+        fmt.Println("El objeto es una persona")
+    } else if juguete == "cosa" {
+        fmt.Println("El objeto es una cosa")
+    } else if juguete == "animal" {
+        fmt.Println("El objeto es un animal")
+    } else {
+        fmt.Println("El objeto es otra categoria")
+    }
+}
 func main() {
 	// fmt.Println("texto de la funcion del ejecicio 2")
 	// pensionados()
@@ -113,6 +159,19 @@ func main() {
 	// fmt.Println("La altura es:", altura2, "mts")
 	// fmt.Println("Al envejecer:", ConversionEnPies(&altura), "mts")
 	// fmt.Println("Despues de envejecer:", altura2, "mts")
-	fmt.Println("El area de un circulo cuyo radio es 3 es: ", area(3))
+	// fmt.Println("El area de un circulo cuyo radio es 3 es: ", area(3))
+	// a, p := circulo(8)
+	// fmt.Println("El area del circulo es ", a)
+	// fmt.Println("El perimetro del circulo es ", p)
+	// fmt.Println(sumar1(2))
+	// fmt.Println(sumar1(2, 2))
+	// fmt.Println(sumar1(2, 2, 2, 2, 2	, 2))	
+	// ecodelamotaña("causa", 5)
+	// area1, perimetro1 := circulo2(8)
+	// fmt.Println("El area del circulo", area1())
+	// fmt.Println("El perimetro del circulo", perimetro1())
+	Objeto_Animal_Persona()
+
 }
 
+// 23,24, 25 ,26
